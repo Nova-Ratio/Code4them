@@ -2,7 +2,9 @@ import React from "react";
 import externalLink from "./assets/images/external-link.png";
 
 //Enter your project into array as "{ name: 'Project Name', link: 'https://www.google.com' },"
-const projects = [];
+const projects = [
+  { name: 'Thousand Dream Planets', link: 'https://www.stargaze.zone/launchpad/stars1up98ynujx9jad48gshk699rhxm0m2nrw0m6ttlz353dfeuwcfndq9aw3q8' },
+];
 
 const ProjectCard = ({ project }) => {
   return (
@@ -49,6 +51,9 @@ function App() {
           a world anymore, just help them survive.
         </p>
         <img alt="black-ribbon" src={"/image/black.png"} className="max-w-[220px] w-full" />
+        <p className="text-[#FCFBF7] md:text-base sm:text-sm text-xs text-center">
+          All funds from #Code4them projects will be send to "Ahbap" for earthquake survivors in Turkey
+        </p>
         <div className="w-full flex flex-col items-center gap-8">
           {projects.map((project, idx) => (
             <ProjectCard key={idx} project={project} />
